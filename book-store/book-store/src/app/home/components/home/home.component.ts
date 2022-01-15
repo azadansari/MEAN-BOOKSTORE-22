@@ -26,7 +26,6 @@ export class HomeComponent implements OnInit {
     let book2 = new BookModel();
     book2.id = 2;
     book2.name = ".Net 2.0";
-    book2.price = 200;
     book2.author = "Xyz Pub.";
     book2.imgSrc = "https://images-na.ssl-images-amazon.com/images/I/51JdckX4AdL.jpg";
     this.books.push(book2);
