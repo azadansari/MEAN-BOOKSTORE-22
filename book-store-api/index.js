@@ -1,20 +1,28 @@
-//Configure server
+// Configure server
 
-// step:1 import Package
+// Step 1: Import Express package
 const express = require("express");
+const bookRoutes = require("./routers/book");
+const mongodb = require("./configs/mongodb");
 
-//step:2 create Server
-const server = express();
+// Step 2: Create Server
+const server = express(); 
 
+// Connect to mongodb
+mongodb.connect();
 
-//step:3 Configure port
+// Step 3: Configure port
 server.listen(3100);
 
+// Custom Routes
+// Redirect book related requests to book routes.
+console.log("Index.js");
+server.use('/api/Book', bookRoutes);
 
-//step:4  Handle request on Default Path
+// Step 4: Handle request on default path
 server.get("/", (req, res)=>{
-    //Sending Esponse to client
-    res.send("Hello from ExpressJS using nodemon");
+    // Sending respone to client
+    res.send("Hello from Express JS");
 });
 
 console.log("Server is listening on localhost:3100");
