@@ -8,7 +8,7 @@
     2.3 Create routing. - Done
     2.4 Create Model
     2.5 Create Api Controller. - 50%
-    2.6 Create Repositories
+    2.6 Create Repositories - done
 3. Connect api to mongodb
     3.1 Create Database and get url - done
     3.2 Install mongodb in node - done.

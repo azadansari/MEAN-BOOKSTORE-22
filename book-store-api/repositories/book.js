@@ -11,3 +11,8 @@ exports.getAll = (cb)=>{
         })
         .catch(err=>{console.log(err)})
 }
+
+
+function giveBooks(books){
+    cb(books);
+}
